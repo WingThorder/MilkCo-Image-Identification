@@ -25,8 +25,6 @@ def ArUcoMarkerGeneration():
 def readArUcoMarker():
     #load a marker's image
     img = cv2.imread("MilkCo Process Cards/Air_Distribution.png",0)
-    print(img)
-
 
     parameters = aruco.DetectorParameters()
 
