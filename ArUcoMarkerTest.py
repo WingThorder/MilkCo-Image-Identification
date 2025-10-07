@@ -4,9 +4,8 @@ print(cv2.__version__)
 # define a size of ArUco Marker
 aruco_dict = aruco.getPredefinedDictionary(aruco.DICT_4X4_250)
 
+# A funtion to generate an ArUco Marker
 def ArUcoMarkerGeneration():
-    
-
     #define the testing marker's id and its image size (pixels)
     marker_id = 23
     marker_size = 96
@@ -24,6 +23,8 @@ def ArUcoMarkerGeneration():
 
         print("ArUco marker saved as "+output_file_name)
 
+
+# A function to read image file and detect if marker exists
 def readArUcoMarker():
     #load a marker's image
     img = cv2.imread("MilkCo Process Cards/TransportDieselTruck.png",0)
