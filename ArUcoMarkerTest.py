@@ -27,7 +27,9 @@ def ArUcoMarkerGeneration():
 # A function to read image file and detect if marker exists
 def readArUcoMarker():
     #load a marker's image
-    img = cv2.imread("MilkCo Process Cards/TransportDieselTruck.png",0)
+    # img = cv2.imread("MilkCo Process Cards/TransportDieselTruck.png",0)
+    # img = cv2.imread("TransportDieselTruckTakenByiPhone(4284x5712).png",0)
+    img = cv2.imread("TransportDieselTruckTakenByiPhone(1280x720).png",0)
 
     # Define a Aruco detector by given dictionary
     parameters = aruco.DetectorParameters()
