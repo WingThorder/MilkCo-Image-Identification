@@ -1,4 +1,4 @@
-User Guide
+## User Guide
 
 Project Structure
 There are three main folders/files.
@@ -7,7 +7,7 @@ There are three main folders/files.
 3. ArUcoMarkerTest.py: a python file of testing markers generation and recognition
 
 
-Development Update
-  08/10/2025: 
-    * Upload two images taken by phone with different resoultion
-    * Function readArUcoMarker() correctly detects the card id of those image
+## Development Update
+  08/10/2025
+- Upload two images taken by phone with different resoultion
+- Function readArUcoMarker() correctly detects the card id of those image
