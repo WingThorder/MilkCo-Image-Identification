@@ -1,1 +1,1 @@
-Horizontal
+ img = cv2.imread("MultipleCardsbyIphone.jpg",0)

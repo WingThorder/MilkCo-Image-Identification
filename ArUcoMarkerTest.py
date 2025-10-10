@@ -7,11 +7,10 @@ aruco_dict = aruco.getPredefinedDictionary(aruco.DICT_4X4_250)
 # A funtion to generate an ArUco Marker
 def ArUcoMarkerGeneration():
     #define the testing marker's id and its image size (pixels)
-    marker_id = 23
-    marker_size = 96
+    marker_size = 23
 
     #generate a ArUco marker from 1 - 5
-    for i in range(5):
+    for i in range(26):
         marker_image = aruco.generateImageMarker(aruco_dict,i+1,marker_size)
         #adding a border for the marker. Otherwise, it can't detect correctly
         # marker_with_border = cv2.copyMakeBorder(
@@ -27,9 +26,10 @@ def ArUcoMarkerGeneration():
 # A function to read image file and detect if marker exists
 def readArUcoMarker(scanningDirection):
     #load a marker's image
-    # img = cv2.imread("MilkCo Process Cards/TransportDieselTruck.png",0)
+    # img = cv2.imread("MilkCo Process Cards/TransportGasTruck(6).jpg",0)
     # img = cv2.imread("TransportDieselTruckTakenByiPhone(4284x5712).png",0)
-    img = cv2.imread("MultipleCardsH.png",0)
+    img = cv2.imread("Test1.png",0)
+    # img = cv2.imread("MultipleCardsbyIphone.jpg",0)
 
     # Define a Aruco detector by given dictionary
     parameters = aruco.DetectorParameters()
