@@ -28,8 +28,9 @@ def readArUcoMarker(scanningDirection):
     #load a marker's image
     # img = cv2.imread("MilkCo Process Cards/TransportGasTruck(6).jpg",0)
     # img = cv2.imread("TransportDieselTruckTakenByiPhone(4284x5712).png",0)
-    img = cv2.imread("Test1.png",0)
+    # img = cv2.imread("testing1.jpg",0)
     # img = cv2.imread("MultipleCardsbyIphone.jpg",0)
+    img = cv2.imread("MultipleCardsH.png",0)
 
     # Define a Aruco detector by given dictionary
     parameters = aruco.DetectorParameters()
@@ -39,21 +40,22 @@ def readArUcoMarker(scanningDirection):
     markers = []
     sorted_markers = []
     if ids is not None:
-        print(ids.flatten())
+        # print(ids.flatten())
         for i, marker_id in enumerate(ids.flatten()):
             marker_corners = corners[i][0] # return a list of x y coordinates of a marker
             corners_mean_of_x = marker_corners[:,0].mean() # calculating mean of x coordinate of four corners
             corners_mean_of_y = marker_corners[:,1].mean() # calculating mean of x coordinate of four corners
             markers.append({"id":marker_id, "XMean":corners_mean_of_x, "YMean": corners_mean_of_y})
-        print(markers)
+        # print(markers)
         if(scanningDirection == "Vertical"):
             sorted_markers = sorted(markers, key=lambda marker: marker["YMean"])
         elif(scanningDirection == "Horizontal"):
             sorted_markers = sorted(markers, key=lambda marker: marker["XMean"])
         elif(scanningDirection == "in terms of card ID"):
             sorted_markers = markers.sort(key= lambda marker: marker.get("id"))
-        print(sorted_markers)
+        # print(sorted_markers)
         sorted_ids = [marker["id"] for marker in sorted_markers]
+        print("Here is the ids ordered by your selected direction:")
         print(*sorted_ids)
     else:
         print("No markers detected")
