@@ -1,1 +1,1 @@
- img = cv2.imread("MilkCo Process Cards/TransportDieselTruck.png",0)
+Horizontal
